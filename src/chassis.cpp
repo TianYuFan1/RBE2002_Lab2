@@ -27,9 +27,6 @@ void RomiChassis::UpdateEffortDriveWheelsPI(int target_speed_left, int target_sp
   // !!! ATTENTION !!!
   // Assignment 2
   {
-    Serial.println(SpeedLeft());
-    Serial.println(SpeedRight());
-
     float error_left = target_speed_left - SpeedLeft();
     float error_right = target_speed_right - SpeedRight();
     
@@ -38,8 +35,8 @@ void RomiChassis::UpdateEffortDriveWheelsPI(int target_speed_left, int target_sp
 
     float u_left = Kp * error_left + Ki * E_left;
     float u_right = Kp * error_right + Ki * E_right;
-    motors.setEfforts(u_left,u_right);
-    // motors.setEfforts(100, 100);
+    // motors.setEfforts(u_left,u_right);
+    motors.setEfforts(100, 100);
   }
 }
 
@@ -48,12 +45,14 @@ void RomiChassis::SerialPlotter(float a, float b, float c, float d)
     // !!! ATTENTION !!!
     // USE this function for assignment 3!
     Serial.print(a);
-    Serial.print('\t');
+    // Serial.print('\t');
+    Serial.print(",");
     Serial.print(b);
-    Serial.print('\t');
+    Serial.print(",");
+    // Serial.print('\t');
     Serial.print(c);
-    Serial.print('\t');
-    Serial.print(d);
+    // Serial.print('\t');
+    // Serial.print(d);
     Serial.println();
 }
 
