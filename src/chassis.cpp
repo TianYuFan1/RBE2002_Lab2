@@ -32,8 +32,8 @@ void RomiChassis::UpdateEffortDriveWheelsPI(int target_speed_left, int target_sp
 
     u_left = Kp * error_left + Ki * E_left;
     u_right = Kp * error_right + Ki * E_right;
-    // motors.setEfforts(u_left,u_right);
-    motors.setEfforts(100, 100);
+    motors.setEfforts(u_left,u_right);
+    // motors.setEfforts(100, 100);
   }
 }
 
