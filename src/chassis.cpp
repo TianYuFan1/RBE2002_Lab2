@@ -3,17 +3,14 @@
 
 float RomiChassis::SpeedLeft(void)
 {
-    // float v_tan_ms = (C_wheel / N_wheel) * (count_left - prev_count_left) / (millis() - last_update);
-    float v_tan_ms = (C_wheel / N_wheel) * (count_left - prev_count_left) / (previous_time - previous_previous_time);
-    float v_tan_s = v_tan_ms * (1.0 / 0.001);
-    return v_tan_s; //[mm/s]
+    float v_tan = (C_wheel / N_wheel) * (count_left - prev_count_left) / (interval / 1000.0);
+    return v_tan; //[mm/s]
 }
 
 float RomiChassis::SpeedRight(void)
 {
-    float v_tan_ms = (C_wheel / N_wheel) * (count_right - prev_count_right) / (previous_time - previous_previous_time);
-    float v_tan_s = v_tan_ms * (1.0 / 0.001);
-    return v_tan_s; // [mm/s]
+    float v_tan = (C_wheel / N_wheel) * (count_right - prev_count_right) / (interval / 1000.0);
+    return v_tan; // [mm/s]
 
 }
 
