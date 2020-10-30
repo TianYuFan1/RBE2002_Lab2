@@ -49,7 +49,7 @@ class RomiChassis{
         void UpdateEffortDriveWheelsPI(int a, int b);
 
         void MotorControl(void);
-        void SerialPlotter(float a, float b, float c, float d);
+        void SerialPlotter();
 
         void StartDriving(float, float, uint32_t);
         bool CheckDriveComplete(void);
