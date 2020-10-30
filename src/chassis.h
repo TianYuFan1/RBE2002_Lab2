@@ -15,7 +15,7 @@ class RomiChassis{
         float target_left = 0;
         float target_right = 0;
         float Kp = 1; // 1
-        float Ki = 0.9; // 0.5
+        float Ki = 1.3; // 0.5
         float E_left = 0; //accumulated errors
         float E_right = 0;
 
