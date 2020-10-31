@@ -20,7 +20,7 @@ void loop()
     case ROBOT_IDLE:
       if(buttonA.getSingleDebouncedRelease()) 
       {
-        chassis.StartDriving(50, 50, 10000); //contains your program that the robot executes when pushbutton A is pressed // 10000
+        chassis.StartDriving(10, 10, 10000); //contains your program that the robot executes when pushbutton A is pressed // 10000
         robot_state = ROBOT_DRIVING;
       }
       break;
