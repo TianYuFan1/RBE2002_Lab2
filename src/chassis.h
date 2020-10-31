@@ -14,8 +14,8 @@ class RomiChassis{
         //declare variables for PI controller
         float target_left = 0;
         float target_right = 0;
-        float Kp = 10; // 1
-        float Ki = 0; // 0.5
+        float Kp = 0.3; // 1
+        float Ki = 0.1; // 0.5
         float E_left = 0; //accumulated errors
         float E_right = 0;
 
